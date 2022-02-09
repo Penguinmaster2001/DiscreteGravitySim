@@ -1,0 +1,65 @@
+C:/Users/Penguin/Desktop/imgCppTestLog/TestBackgroundGrid.bmp
+C:/Users/Penguin/Desktop/Orbits/
+OrbitMoon
+5000
+5000
+400000000
+10000000
+1.0
+384000000.0
+0.0
+0.0
+0.0
+1022.0
+0.0
+end at line 14
+
+*****************************|READ BELOW|*****************************
+	 		     V          V
+
+variable			line #
+strings:
+Background path		 	1
+output folder path	 	2 Path to the folder you want the output to be in, not the name of the files.
+output file names	 	3 Name of the output files. If FRAME is set here: FRAME_0, FRAME_1, etc. will be animation outputs
+				  FRAME_X_Y.bmp, etc., and FRAME_POSITIONS.CSV, etc. will be data outputs 
+integers:
+width			 	4
+height			 	5
+frames			 	6
+
+steps			 	7
+
+doubles:
+change in time per step	 	8
+
+camera initial x	 	9
+camera initial y		10
+camera initial z		11
+
+camera change in x per frame	12 for data mode, this is inital particle velocity
+camera change in y per frame	13
+camera change in z per frame	14
+
+*****************************IMPORTANT*****************************
+
+Change all "\" to "/" in the file paths and make sure they are valid.
+ex: C:\Users\Name\Desktop\Background.bmp -> C:/Users/Name/Desktop/Background.bmp
+all images must be bitmaps (.bmp)
+
+*****THIS PROGRAM WILL OVERWRITE FILES WITHOUT WARNING################################################*****
+So be sure the file paths are correct
+
+This program takes a bitmap (.bmp) and a text (.txt) file (this file) as inputs,
+and outputs several bitmaps (.bmp) (animation mode),
+or several bitmaps (.bmp) and several Comma Separated Values (.CSV) files (data mode)
+depending on the mode.
+I recommend creating a folder for them in order to prevent clutter
+
+formatting (follow these exactly or the program may not work):
+strings: remove leading and trailing whitespace
+Integers: numbers only, remove all whitespace, no negatives
+doubles: "." indicates a decimal, "-" as the first character indicates a negative, remove all whitespace,
+scientific notation for doubles in the form of aEb where the result is a*10^b. Ex: 2.34E-10 -> 0.000000000234
+
+C:/Users/Penguin/Desktop/MoonInstructions.txt
